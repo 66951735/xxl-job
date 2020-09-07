@@ -177,7 +177,7 @@
                     <div class="form-group">
                         <label for="firstname" class="col-sm-2 control-label">${I18n.jobinfo_field_executorparam}<font color="red">*</font></label>
                         <div class="col-sm-10">
-                            <textarea class="textarea form-control" name="executorParam" placeholder="json格式，{&quot;path&quot;:&quot;&quot;,&quot;param&quot;:{}}。&#10;其中path为job的http路径，param为job的参数，目前job对应的http接口仅支持POST请求，json入参方式。&#10;例如：{&quot;path&quot;:&quot;/job/demo&quot;, &quot;param&quot;:{&quot;param1&quot;:&quot;value1&quot;,&quot;param2&quot;:&quot;value2&quot;}}" maxlength="1024" style="height: 63px; line-height: 1.2;"></textarea>
+                            <textarea class="textarea form-control" name="executorParam" placeholder="1. json格式，{&quot;path&quot;:&quot;&quot;,&quot;param&quot;:{}}&#10;2. 其中path为job的http路径，param为job的参数&#10;3. 例如：{&quot;path&quot;:&quot;/job/demo&quot;, &quot;param&quot;:{&quot;param1&quot;:&quot;value1&quot;,&quot;param2&quot;:&quot;value2&quot;}}&#10;4. 目前job对应的http接口仅支持POST请求，json入参方式" maxlength="1024" style="height: 84px; line-height: 1.2;"></textarea>
 						</div>
                     </div>
 
