@@ -102,6 +102,7 @@ public class JobInfoController {
 	@RequestMapping("/add")
 	@ResponseBody
 	public ReturnT<String> add(XxlJobInfo jobInfo) {
+		jobInfo.setExecutorHandler("httpJobHandler");
 		return xxlJobService.add(jobInfo);
 	}
 	
