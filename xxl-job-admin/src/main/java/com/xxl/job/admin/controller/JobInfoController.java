@@ -102,13 +102,13 @@ public class JobInfoController {
 	@RequestMapping("/add")
 	@ResponseBody
 	public ReturnT<String> add(XxlJobInfo jobInfo) {
-		jobInfo.setExecutorHandler("httpJobHandler");
 		return xxlJobService.add(jobInfo);
 	}
 	
 	@RequestMapping("/update")
 	@ResponseBody
 	public ReturnT<String> update(XxlJobInfo jobInfo) {
+		jobInfo.setExecutorHandler("httpJobHandler");
 		return xxlJobService.update(jobInfo);
 	}
 	
