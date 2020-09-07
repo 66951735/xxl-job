@@ -172,7 +172,7 @@
                         <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_author}<font color="red">*</font></label>
                         <div class="col-sm-4"><input type="text" class="form-control" name="author" placeholder="${I18n.system_please_input}${I18n.jobinfo_field_author}" maxlength="50" ></div>
                         <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_alarmemail}<font color="black">*</font></label>
-                        <div class="col-sm-4"><input type="text" class="form-control" name="alarmEmail" placeholder="线上环境请配置kids.rd@list.nie.netease.com" maxlength="100" ></div>
+                        <div class="col-sm-4"><input type="text" class="form-control" name="alarmEmail" placeholder="线上请配置kids.rd@list.nie.netease.com" maxlength="100" ></div>
 					</div>
                     <div class="form-group">
                         <label for="firstname" class="col-sm-2 control-label">${I18n.jobinfo_field_executorparam}<font color="red">*</font></label>
@@ -368,12 +368,12 @@ exit 0
                         <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_author}<font color="red">*</font></label>
                         <div class="col-sm-4"><input type="text" class="form-control" name="author" placeholder="${I18n.system_please_input}${I18n.jobinfo_field_author}" maxlength="50" ></div>
                         <label for="lastname" class="col-sm-2 control-label">${I18n.jobinfo_field_alarmemail}<font color="black">*</font></label>
-                        <div class="col-sm-4"><input type="text" class="form-control" name="alarmEmail" placeholder="线上环境请配置kids.rd@list.nie.netease.com" maxlength="100" ></div>
+                        <div class="col-sm-4"><input type="text" class="form-control" name="alarmEmail" placeholder="线上请配置kids.rd@list.nie.netease.com" maxlength="100" ></div>
                     </div>
                     <div class="form-group">
                         <label for="firstname" class="col-sm-2 control-label">${I18n.jobinfo_field_executorparam}<font color="red">*</font></label>
                         <div class="col-sm-10">
-                            <textarea class="textarea form-control" name="executorParam" placeholder="1. json格式，{&quot;path&quot;:&quot;&quot;,&quot;param&quot;:{}}&#10;2. 其中path为job的http路径，param为job的参数&#10;3. 例如：{&quot;path&quot;:&quot;/job/demo&quot;, &quot;param&quot;:{&quot;param1&quot;:&quot;value1&quot;,&quot;param2&quot;:&quot;value2&quot;}}&#10;4. 目前job对应的http接口仅支持POST请求，json入参方式" maxlength="512" style="height: 63px; line-height: 1.2;"></textarea>
+                            <textarea class="textarea form-control" name="executorParam" placeholder="1. json格式，{&quot;path&quot;:&quot;&quot;,&quot;param&quot;:{}}&#10;2. 其中path为job的http路径，param为job的参数&#10;3. 例如：{&quot;path&quot;:&quot;/job/demo&quot;, &quot;param&quot;:{&quot;param1&quot;:&quot;value1&quot;,&quot;param2&quot;:&quot;value2&quot;}}&#10;4. 目前job对应的http接口仅支持POST请求，json入参方式" maxlength="512" style="height: 84px; line-height: 1.2;"></textarea>
 						</div>
                     </div>
 
