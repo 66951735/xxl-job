@@ -46,11 +46,20 @@ $(function() {
 	                {
 	                	"data": 'jobDesc',
 						"visible" : true,
-						"width":'25%'
+						"width":'15%'
+					},
+			        {
+			        	"data":"executorParam",
+						"visible" : true,
+						"width": "15%",
+						"render": function ( data, type, row ) {
+			        		let paths = data.split("/");
+							return "/" + paths[2] + "/" + paths[3].substr(0, paths[3].length - 2);
+						}
 					},
 					{
 						"data": 'glueType',
-						"width":'25%',
+						"width":'15%',
 						"visible" : true,
 						"render": function ( data, type, row ) {
 							var glueTypeTitle = findGlueTypeTitle(row.glueType);
@@ -65,7 +74,7 @@ $(function() {
 					{
 						"data": 'jobCron',
 						"visible" : true,
-						"width":'13%'
+						"width":'10%'
 					},
 	                {
 	                	"data": 'addTime',
@@ -99,7 +108,7 @@ $(function() {
 	                },
 	                {
 						"data": I18n.system_opt ,
-						"width":'10%',
+						"width":'20%',
 	                	"render": function ( data, type, row ) {
 	                		return function(){
 
@@ -126,15 +135,16 @@ $(function() {
                                 tableData['key'+row.id] = row;
 
                                 // opt
-                                var html = '<div class="btn-group">\n' +
-                                    '     <button type="button" class="btn btn-primary btn-sm">'+ I18n.system_opt +'</button>\n' +
+                                var html =
+									'<div class="btn-group" _id="'+ row.id +'" ><a href="javascript:void(0);" class="job_trigger" >'+ I18n.jobinfo_opt_run +'</a></div>&nbsp;&nbsp;&nbsp;' +
+									'<div class="btn-group"><a href="'+ logHref +'">'+ I18n.jobinfo_opt_log +'</a></div>&nbsp;&nbsp;&nbsp;' +
+									'<div class="btn-group">\n' +
+                                    '     <button type="button" class="btn btn-primary btn-sm">其他操作</button>\n' +
                                     '     <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">\n' +
                                     '       <span class="caret"></span>\n' +
                                     '       <span class="sr-only">Toggle Dropdown</span>\n' +
                                     '     </button>\n' +
                                     '     <ul class="dropdown-menu" role="menu" _id="'+ row.id +'" >\n' +
-                                    '       <li><a href="javascript:void(0);" class="job_trigger" >'+ I18n.jobinfo_opt_run +'</a></li>\n' +
-                                    '       <li><a href="'+ logHref +'">'+ I18n.jobinfo_opt_log +'</a></li>\n' +
                                     '       <li><a href="javascript:void(0);" class="job_registryinfo" >' + I18n.jobinfo_opt_registryinfo + '</a></li>\n' +
                                     '       <li><a href="javascript:void(0);" class="job_next_time" >' + I18n.jobinfo_opt_next_time + '</a></li>\n' +
                                     '       <li class="divider"></li>\n' +
@@ -248,7 +258,8 @@ $(function() {
 
     // job trigger
     $("#job_list").on('click', '.job_trigger',function() {
-        var id = $(this).parents('ul').attr("_id");
+    	alert("fdafadfas");
+        var id = $(this).parents('div').attr("_id");
         var row = tableData['key'+id];
 
         $("#jobTriggerModal .form input[name='id']").val( row.id );

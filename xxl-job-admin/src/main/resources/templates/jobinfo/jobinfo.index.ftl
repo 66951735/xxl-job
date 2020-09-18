@@ -80,6 +80,7 @@
 					            		<th name="id" >${I18n.jobinfo_field_id}</th>
 					                	<th name="jobGroup" >${I18n.jobinfo_field_jobgroup}</th>
 					                  	<th name="jobDesc" >${I18n.jobinfo_field_jobdesc}</th>
+                                        <th name="jobPath">路径(/job前缀)</th>
                                         <th name="glueType" >${I18n.jobinfo_field_gluetype}</th>
 					                  	<th name="executorParam" >${I18n.jobinfo_field_executorparam}</th>
                                         <th name="jobCron" >Cron</th>
