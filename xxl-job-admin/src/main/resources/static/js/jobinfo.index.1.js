@@ -258,7 +258,6 @@ $(function() {
 
     // job trigger
     $("#job_list").on('click', '.job_trigger',function() {
-    	alert("fdafadfas");
         var id = $(this).parents('div').attr("_id");
         var row = tableData['key'+id];
 
