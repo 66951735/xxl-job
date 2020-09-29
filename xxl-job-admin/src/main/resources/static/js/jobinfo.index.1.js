@@ -53,8 +53,12 @@ $(function() {
 						"visible" : true,
 						"width": "15%",
 						"render": function ( data, type, row ) {
-			        		let paths = data.split("/");
-							return "/" + paths[2] + "/" + paths[3].substr(0, paths[3].length - 2);
+			        		let jobParams = data.split(",");
+							let paths = jobParams[0].split("/");
+							if (jobParams.length == 1) {
+								return "/" + paths[2] + "/" + paths[3].substr(0, paths[3].length - 2);
+							}
+							return "/" + paths[2] + "/" + paths[3].substr(0, paths[3].length - 1);
 						}
 					},
 					{
@@ -62,7 +66,8 @@ $(function() {
 						"width":'15%',
 						"visible" : true,
 						"render": function ( data, type, row ) {
-							var glueTypeTitle = findGlueTypeTitle(row.glueType);
+							//var glueTypeTitle = findGlueTypeTitle(row.glueType);
+							var glueTypeTitle = "BEAN";
                             if (row.executorHandler) {
                                 return glueTypeTitle +"：" + row.executorHandler;
                             } else {
@@ -475,7 +480,7 @@ $(function() {
 		$("#addModal .form .form-group").removeClass("has-error");
 		$(".remote_panel").show();	// remote
 
-		$("#addModal .form input[name='executorHandler']").removeAttr("readonly");
+		//$("#addModal .form input[name='executorHandler']").removeAttr("readonly");
 	});
 
 
@@ -488,7 +493,7 @@ $(function() {
             $executorHandler.val("");
             $executorHandler.attr("readonly","readonly");
         } else {
-            $executorHandler.removeAttr("readonly");
+            //$executorHandler.removeAttr("readonly");
         }
     });
 

@@ -141,15 +141,16 @@
                     </div>
                     <div class="form-group">
                         <label for="firstname" class="col-sm-2 control-label">${I18n.jobinfo_field_gluetype}<font color="red">*</font></label>
-                        <div class="col-sm-4">
-                            <select class="form-control glueType" name="glueType" >
+                        <div class="col-sm-4"><input type="text" class="form-control" name="glueType" maxlength="100" value="BEAN" readonly></div>
+                        <#--<div class="col-sm-4">
+                            <select class="form-control glueType" name="glueType">
 								<#list GlueTypeEnum as item>
 									<option value="${item}" >${item.desc}</option>
 								</#list>
                             </select>
-                        </div>
+                        </div>-->
                         <label for="firstname" class="col-sm-2 control-label">JobHandler<font color="red">*</font></label>
-                        <div class="col-sm-4"><input type="text" class="form-control" name="executorHandler" placeholder="${I18n.system_please_input}JobHandler" maxlength="100" value="httpJobHandler" disabled></div>
+                        <div class="col-sm-4"><input type="text" class="form-control" name="executorHandler" placeholder="${I18n.system_please_input}JobHandler" maxlength="100" value="httpJobHandler" readonly></div>
                     </div>
                     <div class="form-group">
                         <label for="firstname" class="col-sm-2 control-label">${I18n.jobinfo_field_executorBlockStrategy}<font color="red">*</font></label>
